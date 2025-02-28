@@ -4,6 +4,8 @@ const mongoose = require("mongoose")
 const {MONGO_DB_CONFIG} = require ("./config/app.config")
 const http = require("http")
 const server = http.createServer(app)
+const {initMeetingServer} = require("./meeting-server")
+initMeetingServer(server);
 
 
 //meeting-server
