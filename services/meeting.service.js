@@ -60,7 +60,7 @@ async function isMeetingPresent(meetingId, callback) {
     });
 }
 
-async function checkMeetingExist(meetingId, callback) {
+async function checkMeetingExists(meetingId, callback) {
   meeting
     .findById(meetingId, "hostId, hostName, startTime")
     .populate("meetingUsers", "MeetingUser")
@@ -116,7 +116,7 @@ module.exports = {
     joinMeeting,
     getAllMeetingUsers,
     isMeetingPresent,
-    checkMeetingExist,
+    checkMeetingExists,
     getUserBySocketId,
     updateMeetingUser,
     getMeetingUser,
